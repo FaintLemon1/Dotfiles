@@ -5,7 +5,17 @@ hl.monitor({
   mode = "preferred",
   position = "0x0",
   scale = 1,
+  transform = 0,
 })
+
+hl.monitor({
+  output = "HDMI-A-3",
+  mode = "1920x1080@60",
+  position = "1920x0",
+  scale = 1,
+})
+
+
 
 hl.on("hyprland.start", function ()
     hl.exec_cmd("terminal")
@@ -16,10 +26,15 @@ hl.on("hyprland.start", function ()
 end)
 
 
-hl.config({
+hl.config ({
   general = {
     gaps_in = 5,
     gaps_out = 20,
+  },
+  decoration = {
+    blur = {
+      enabled = false,
+    }
   }
 })
 
@@ -34,6 +49,7 @@ hl.config({
         scroll_factor = 0.5
       }
     }
+    
 })
 
 
@@ -102,6 +118,23 @@ hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
+local window = hl.dsp.window -- EDIT: Forgot this in initial post >.<
+local mainMod = 'SUPER' -- EDIT: Added mainMod as a var to match OPs setup
+local left = { x = -10, y = 0, relative = true }
+local down = { x = 0, y = 10, relative = true }
+local up = { x = 0, y = -10, relative = true }
+local right = { x = 10, y = 0, relative = true }
+
+local function opts(direction)
+  return { description = 'Resize the active window ' .. direction, repeating = true }
+end
+
+hl.bind(mainMod .. ' + ALT + h', window.resize(left), opts('left'))
+hl.bind(mainMod .. ' + ALT + j', window.resize(down), opts('down'))
+hl.bind(mainMod .. ' + ALT + k', window.resize(up), opts('up'))
+hl.bind(mainMod .. ' + ALT + l', window.resize(right), opts('right'))
+
+
 
 -- Devices config
 
@@ -136,7 +169,8 @@ hl.window_rule({
   },
   float = true,
   center = true,
-  size = {"monitor_w * 0.5", "monitor_h * 0.5"}
+  size = {"monitor_w * 0.5", "monitor_h * 0.5"},
+  
 })
 
 hl.window_rule({
