@@ -8,11 +8,13 @@
 	imports = [ # Include the results of the hardware scan.
       ../../hardware-configuration.nix
       ../../modules/system/gaming.nix
-      ../../modules/graphics.nix
+      ../../modules/graphics.nix #for usage of nvidia cardgraphics
       ../../modules/shell.nix
+		#../../modules/home/empty_multimedia.nix
+
     ];
 
-  # Bootloader.
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
  
   # configuration.nix
@@ -68,7 +70,7 @@
   nix.settings.experimental-features = [
   "nix-command"
   "flakes"
-];
+  ];
 
   services.displayManager.defaultSession = "hyprland";
   programs.hyprland.enable = true;
@@ -86,12 +88,8 @@
 	kdePackages.okular #pdfreader
   	vlc # video_media_player
   	
-
-	vscode # editor de codigo
 	
-	texliveFull #latex
-	
-	spotify #music reproduction
+	spotify #music reproductor 
 
 	thunar
 
@@ -99,38 +97,15 @@
 	
 	obsidian
 	
-	#terminal things
 	
-	kitty #terminal
-
-
-	termdown #terminal cound_down
-	zathura #terminal_pdfreader
-	tree #terminal
-	yazi #terminal_archive_manager
-	git # tool_for_github
-	neovim #editor de codigo desde la terminal
-	fastfetch #terminal desktop description
-	pdftk #tool for pdf 
-
-
 	#streaming and record screeen
 	#obs-studio
 
 	# torrents
-	qbittorrent
+	qbittorrent	
 
-	gcc #c
-	ncurses #clib
-	python3
-	
-	ncspot #musica 
-
-	github-cli
-
-
-	teams-for-linux #microsoftteamsforlinux
 	##	tools ###
+
 	#ventoy-full #insecure 	
 	uxplay # para reproducir iphone en laptop
 
@@ -138,10 +113,22 @@
 
 
 #some fonts for waybar icons and etc.
- 	fonts.packages = with pkgs; [
-  		nerd-fonts.jetbrains-mono
-  		nerd-fonts.fira-code
-	];
+	#fonts.packages = [ "JetBrains Mono" ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+	fonts = {
+    packages = with pkgs; [
+      nerd-fonts.jetbrains-mono
+
+      # Para poder probarlas después:
+      ibm-plex
+      iosevka
+    ];
+
+    fontconfig.defaultFonts = {
+      monospace = [
+        "JetBrainsMono Nerd Font"
+      ];
+    };
+  };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -153,6 +140,7 @@
 
   # List services that you want to enable:
   services.desktopManager.plasma6.enable = true;
+
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;

@@ -2,10 +2,14 @@
 
 { 
   imports = [
-  	../../modules/home/hyprland/default.nix
+  	../../modules/desktops/hyprland/default.nix
 
 	 inputs.nixvim.homeManagerModules.nixvim
     	../../modules/home/nixvim.nix
+
+	../../modules/home/multimedia.nix	
+	../../modules/home/dev.nix	
+	../../modules/home/terminal.nix	
   ];
 
   #programs.lazyvim = {
@@ -35,7 +39,7 @@
     wl-clipboard
     playerctl
     libnotify
-  ];
+    ];
 
   programs.git.enable = true;
   programs.home-manager.enable = true;
@@ -52,6 +56,7 @@
 
   #home.file.".config/nvim".source =
    # config.lib.file.mkOutOfStoreSymlink "/home/cesar/Dotfiles/config/nvim";
+
 
  xdg.desktopEntries.prismlauncher-offload = {
   name = "Prism Launcher (NVIDIA)";

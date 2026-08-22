@@ -1,6 +1,6 @@
 -- esta es mi configuracion de hyprland
 
-hl.monitor({
+hl.monitor({ -- monitor config 
   output = "eDP-1",
   mode = "preferred",
   position = "0x0",
@@ -8,7 +8,7 @@ hl.monitor({
   transform = 0,
 })
 
-hl.monitor({
+hl.monitor({ --hdmi monitor config 
   output = "HDMI-A-3",
   mode = "1920x1080@60",
   position = "1920x0",
@@ -16,8 +16,7 @@ hl.monitor({
 })
 
 
-
-hl.on("hyprland.start", function ()
+hl.on("hyprland.start", function () -- init aplications
     hl.exec_cmd("terminal")
     hl.exec_cmd("waybar")
     hl.exec_cmd("hyprpaper")
@@ -26,28 +25,36 @@ hl.on("hyprland.start", function ()
 end)
 
 
-hl.config ({
-  general = {
-    gaps_in = 5,
-    gaps_out = 20,
-  },
-  decoration = {
-    blur = {
-      enabled = false,
+hl.config({
+    animations = {
+        enabled = false,
     }
-  }
+})
+
+
+
+hl.config ({
+	general = {
+		gaps_in = 5,
+		gaps_out = 20,
+  	},
+  	decoration = {
+    		blur = {
+      		enabled = true,
+    		},
+  	},
 })
 
 hl.config({
-    input = {
-      kb_layout = "us",
-      kb_variant = "intl",
-      force_no_accel = true,
+	input = {
+      		kb_layout = "us",
+      		kb_variant = "intl",
+      		force_no_accel = true,
 
-      touchpad = {
-        natural_scroll = true,
-        scroll_factor = 0.5
-      }
+      		touchpad = {
+        		natural_scroll = true,
+        		scroll_factor = 0.5
+      		}
     }
     
 })
@@ -140,17 +147,19 @@ hl.bind(mainMod .. ' + ALT + l', window.resize(right), opts('right'))
 
 --local trackpad = false,
 --
---hl.device({
-  --  name = "logitech-g502-hero-gaming-mouse",
-    --sensitivity = "-0.75",
---})
+hl.device({
+	name = "logitech-g502-hero-gaming-mouse",
+	sensitivity = "-0.75",
 
---if trackpad then 
-  --hl.device({
-    --  name = "synps/2-synaptics-touchpad",
-      --enabled = false
-    --})
---else
+	})
+
+hl.device({
+	name = "synps/2-synaptics-touchpad",
+	sensitivity = "1.0",
+	enabled = true
+
+    	})
+
   -- hl.device({
     --  name = "synps/2-synaptics-touchpad",
       --enabled = true
