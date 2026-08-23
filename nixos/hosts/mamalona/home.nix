@@ -10,6 +10,7 @@
 	../../modules/home/multimedia.nix	
 	../../modules/home/dev.nix	
 	../../modules/home/terminal.nix	
+	../../modules/home/games.nix
   ];
 
   #programs.lazyvim = {

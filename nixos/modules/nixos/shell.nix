@@ -16,11 +16,13 @@
       "AUTO_CD"
     ];
 
-    loginShellInit = ''
-      if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
-        exec start-hyprland
-      fi
-    '';
+# autoiniti hyprland
+#    loginShellInit = ''
+#      if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
+#        exec start-hyprland
+#      fi
+#    '';
+
     ohMyZsh = {
       enable = true;
       theme  = "robbyrussell"; 

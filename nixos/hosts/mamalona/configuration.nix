@@ -7,10 +7,9 @@
 {
 	imports = [ # Include the results of the hardware scan.
       ../../hardware-configuration.nix
-      ../../modules/system/gaming.nix
-      ../../modules/graphics.nix #for usage of nvidia cardgraphics
-      ../../modules/shell.nix
-		#../../modules/home/empty_multimedia.nix
+      ../../modules/nixos/gaming.nix
+      ./graphics.nix #for usage of nvidia cardgraphics
+      ../../modules/nixos/shell.nix
 
     ];
 
@@ -86,8 +85,7 @@
   	blueman #gestor_de_bluetoth
 
 	kdePackages.okular #pdfreader
-  	vlc # video_media_player
-  	
+  	  	
 	
 	spotify #music reproductor 
 
@@ -208,8 +206,7 @@ services.syncthing = {
     };
   };
 
-  hardware.uinput.enable = true; # usado por sunshine para emular teclado
-
+ 
   system.stateVersion = "25.11"; # Did you read the comment?
   environment.variables = {
   EDITOR = "nvim";
