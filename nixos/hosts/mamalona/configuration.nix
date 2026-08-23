@@ -6,7 +6,7 @@
 
 {
 	imports = [ # Include the results of the hardware scan.
-      ../../hardware-configuration.nix
+      ./hardware-configuration.nix
       ../../modules/nixos/gaming.nix
       ./graphics.nix #for usage of nvidia cardgraphics
       ../../modules/nixos/shell.nix
