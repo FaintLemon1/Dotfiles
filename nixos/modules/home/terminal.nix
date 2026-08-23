@@ -15,6 +15,7 @@
 	fastfetch #terminal desktop description
 	pdftk #tool for pdf 
 	cmatrix # matrix from terminal 
+	uxplay # reproducir iphone
 
 	];
 }

@@ -6,10 +6,13 @@
 
 {
 	imports = [ # Include the results of the hardware scan.
+      ./graphics.nix #for usage of nvidia cardgraphics
       ./hardware-configuration.nix
       ../../modules/nixos/gaming.nix
-      ./graphics.nix #for usage of nvidia cardgraphics
       ../../modules/nixos/shell.nix
+      ../../modules/nixos/printing.nix
+      ../../modules/nixos/networking.nix
+      ../../modules/nixos/bluetooth.nix
 
     ];
 
@@ -24,20 +27,6 @@
   boot.extraModprobeConfig = ''
   	options thinkpad_acpi fan_control=1
   '';
-
-  networking = {
-	hostName = "nixos"; # Define your hostname.
-	nameservers = [ "1.1.1.1" "1.0.0.1" ];
-	enableIPv6 = false;
-
-	networkmanager = {
-		enable = true;
-	};
-	modemmanager = {
-		enable = true;
-	};
-
-  };
 
   # Set your time zone.
   time.timeZone = "America/Mexico_City";
@@ -85,22 +74,15 @@
 	spotify #music reproductor 
 
 	thunar
-
-	freecad-wayland 
-	
+	#freecad-wayland 
 	obsidian
-	
-	
 	#streaming and record screeen
 	#obs-studio
 
 	# torrents
 	qbittorrent	
 
-	##	tools ###
-
 	#ventoy-full #insecure 	
-	uxplay # para reproducir iphone en laptop
 
   ];
 
@@ -132,31 +114,14 @@
 
 
   # List services that you want to enable:
-  services.desktopManager.plasma6.enable = true;
+  #services.desktopManager.plasma6.enable = true;
 
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
-  services.blueman.enable = true;
   services.tailscale.enable = true;
 
 
   services.power-profiles-daemon.enable = false;
 
-  services = {
-	getty = {
-		autologinUser = "cesar";
-	};
-
-	printing = {   # CUPS - servicio de impresión
-		enable = true; 
-	};
-	avahi = {
-		enable = true;
-   		nssmdns4 = true;
-   		openFirewall = true;  # abre UDP 5353
- 	};
-
-  };
+  services.getty.autologinUser = "cesar"; #autologin
   
 services.tlp = {
   enable = true;
