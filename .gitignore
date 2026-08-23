@@ -1,0 +1,16 @@
+# Resultados generados por Nix
+result
+result-*
+
+# Direnv
+.direnv/
+
+# Credenciales y archivos sensibles
+.env
+*.key
+*.pem
+secrets/plain/
+
+# Archivos temporales de editores
+*.swp
+*.swo

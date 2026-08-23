@@ -17,11 +17,6 @@
   boot.loader.systemd-boot.enable = true;
  
   # configuration.nix
-
-	hardware.nvidia = {
-	  modesetting.enable = true;
-	  open = false;  # O true si usas el driver open-source
-	};
 	
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
