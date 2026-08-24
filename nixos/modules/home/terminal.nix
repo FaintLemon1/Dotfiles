@@ -11,11 +11,13 @@
 	yazi #terminal_archive_manager
 	git # tool_for_github
 	github-cli #git login tool
-	neovim #editor de codigo desde la terminal
+	#neovim #editor de codigo desde la terminal
 	fastfetch #terminal desktop description
 	pdftk #tool for pdf 
 	cmatrix # matrix from terminal 
 	uxplay # reproducir iphone
+	ripgrep
+	fd
 
 	];
 }

@@ -1,12 +1,25 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    vscode
 
-	home.packages = with pkgs; [
-		vscode # editor de codigo
-		texliveFull #latex
-		gcc #c
-		ncurses #clib
-		python3 #pyton
-	];
+    # Flujo completo de LaTeX. scheme-full incluye latexmk, biber,
+    # latexindent, chktex, paquetes matemáticos y fuentes de TeX.
+    texliveFull
+    zathura
+    python3Packages.pygments # Necesario para documentos que usan minted.
+
+    # Herramientas generales de desarrollo.
+    gcc
+    gdb
+    gnumake
+    cmake
+    pkg-config
+    ncurses
+    python3
+    rustc
+    cargo
+    rustfmt
+  ];
 }
