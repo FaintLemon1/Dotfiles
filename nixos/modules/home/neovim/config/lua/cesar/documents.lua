@@ -1,5 +1,7 @@
 -- VimTeX ya se carga por tipo de archivo; no debe cargarse de forma diferida
 -- mediante otro gestor de plugins.
+vim.g.vimtex_syntax_enabled = false
+
 vim.g.tex_flavor = "latex"
 vim.g.vimtex_compiler_method = "latexmk"
 vim.g.vimtex_view_method = "zathura"
@@ -81,8 +83,8 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = { "tex", "plaintex" },
   callback = function(event)
     -- VimTeX conceal: muestra comandos matemáticos como símbolos Unicode.
-    vim.opt_local.conceallevel = 2
-    vim.opt_local.concealcursor = "nc"
+    --vim.opt_local.conceallevel = 2
+    --vim.opt_local.concealcursor = "nc"
 
     local virtual_preview = false
 
