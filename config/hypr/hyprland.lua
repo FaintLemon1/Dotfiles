@@ -49,14 +49,7 @@ hl.config({
 	input = {
       		kb_layout = "us",
       		kb_variant = "intl",
-      		force_no_accel = true,
-
-      		touchpad = {
-        		natural_scroll = true,
-        		scroll_factor = 0.5
-      		}
-    }
-    
+  }
 })
 
 
@@ -149,18 +142,28 @@ hl.bind(mainMod .. ' + ALT + l', window.resize(right), opts('right'))
 --
 hl.device({
 	name = "logitech-g502-hero-gaming-mouse",
-	sensitivity = "-0.75",
+  accel_profile = "flat",
+	sensitivity = "1",
 
 	})
-
-hl.device({
-	name = "synps/2-synaptics-touchpad",
-	sensitivity = "1.0",
-	enabled = true
-
+ 
+hl.device({ --nipple thinkpad
+	name = "tpps/2-elan-trackpoint",
+	sensitivity = "0.1",
+  accel_profile = "flat",
+	enabled = true,
     	})
 
-  -- hl.device({
+hl.device({ --trackpad thinkpad
+	name = "synps/2-synaptics-touchpad",
+	sensitivity = "0.5",
+  accel_profile = "adaptative",
+  natural_scroll = true,
+  scroll_factor = "0.5",
+	enabled = true,
+    	})
+
+ -- hl.device({
     --  name = "synps/2-synaptics-touchpad",
       --enabled = true
    -- })

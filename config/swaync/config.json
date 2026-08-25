@@ -111,51 +111,51 @@
 	{
   		"label": "🔋",
   		"type": "normal",
-  		"command": "kitty sudo /home/cesar/bin/platform-profile.sh low-power"
+  		"command": "kitty sudo /home/cesar/Dotfiles/bin/platform-profile.sh low-power"
 	},
 	{
   		"label": "⚖",
   		"type": "normal",
-  		"command": "kitty sudo /home/cesar/bin/platform-profile.sh balanced"
+  		"command": "kitty sudo /home/cesar/Dotfiles/bin/platform-profile.sh balanced"
 	},
 	{
   		"label": "🚀",
   		"type": "normal",
-  		"command": " kitty sudo /home/cesar/bin/platform-profile.sh performance"
+  		"command": " kitty sudo /home/cesar/Dotfiles/bin/platform-profile.sh performance"
 	},
   {
 		"label": "power-save",
-		"command": "kitty sudo /home/cesar/bin/governor.sh powersave"
+		"command": "kitty sudo /home/cesar/Dotfiles/bin/governor.sh powersave"
 	},
 	{
   	"label": "performance",
-  	"command": "kitty sudo /home/cesar/bin/governor.sh performance"
+  	"command": "kitty sudo /home/cesar/Dotfiles/bin/governor.sh performance"
   },
 	{
 			"label": ""
 	},
 	{
 		"label": "turboff",
-		 "command": "kitty sudo /home/cesar/bin/turbo.sh off"
+		 "command": "kitty sudo /home/cesar/Dotfiles/bin/turbo.sh off"
 	},
   {
   	"label": "turbon",
-  	"command": "kitty sudo /home/cesar/bin/turbo.sh on"
+  	"command": "kitty sudo /home/cesar/Dotfiles/bin/turbo.sh on"
   },
 	{
 			"label": ""
 	},
 	{
   		"label": "0",
-  		"command": "kitty sudo /home/cesar/bin/fan-mode.sh 0"
+  		"command": "kitty sudo /home/cesar/Dotfiles/bin/fan-mode.sh 0"
 	},
 	{
   	"label": "7",
-  	"command": "kitty sudo /home/cesar/bin/fan-mode.sh 7"
+  	"command": "kitty sudo /home/cesar/Dotfiles/bin/fan-mode.sh 7"
 	},
   {
   	"label": "AUTO",
-  	"command": "kitty sudo /home/cesar/bin/fan-mode.sh auto"
+  	"command": "kitty sudo /home/cesar/Dotfiles/bin/fan-mode.sh auto"
 	}
       ]
     }
