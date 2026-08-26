@@ -150,7 +150,7 @@ hl.device({ --nipple thinkpad
 
 hl.device({ --trackpad thinkpad
 	name = "synps/2-synaptics-touchpad",
-	sensitivity = "0.5",
+	sensitivity = "0.25",
   accel_profile = "adaptative",
   natural_scroll = true,
   scroll_factor = "0.5",
