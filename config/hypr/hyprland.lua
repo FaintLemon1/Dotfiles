@@ -69,8 +69,8 @@ hl.bind(mainMod .. " + L ", hl.dsp.exec_cmd("hyprlock")) -- lock
  -- hl.bind(mainMod .. " + A ", hl.dsp.exec_cmd("gnome-calculator"))
 hl.bind(mainMod .. " + Z ", hl.dsp.exec_cmd("zen"))
 hl.bind(mainMod .. " + D ", hl.dsp.exec_cmd("discord"))
-hl.bind(mainMod .. " + Q ", hl.dsp.exec_cmd("kitty --hold fastfetch"))
-hl.bind(mainMod .. " + E ", hl.dsp.exec_cmd("dolphin"))
+hl.bind(mainMod .. " + Q ", hl.dsp.exec_cmd("kitty"))
+hl.bind(mainMod .. " + E ", hl.dsp.exec_cmd("thunar"))
 hl.bind(mainMod .. " + R ",hl.dsp.exec_cmd(" wofi --show drun"))
 
 
@@ -135,16 +135,10 @@ hl.bind(mainMod .. ' + ALT + k', window.resize(up), opts('up'))
 hl.bind(mainMod .. ' + ALT + l', window.resize(right), opts('right'))
 
 
-
--- Devices config
-
---local trackpad = false,
---
 hl.device({
 	name = "logitech-g502-hero-gaming-mouse",
   accel_profile = "flat",
 	sensitivity = "0.5",
-
 	})
  
 hl.device({ --nipple thinkpad
@@ -161,18 +155,9 @@ hl.device({ --trackpad thinkpad
   natural_scroll = true,
   scroll_factor = "0.5",
 	enabled = true,
-    	})
-
- -- hl.device({
-    --  name = "synps/2-synaptics-touchpad",
-      --enabled = true
-   -- })
---end 
-
-
+})
 
 -- windowrules 
-
 hl.window_rule({
   name = "float-steam",
   match = {

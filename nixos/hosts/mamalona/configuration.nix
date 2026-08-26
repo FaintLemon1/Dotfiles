@@ -1,12 +1,10 @@
 #configuracion de cosas relacionadas con el host
 # Thinkpad P15 Gen1
-
-
 { config, pkgs, ... }:
 
 {
 	imports = [ # Include the results of the hardware scan.
-      ./graphics.nix #for usage of nvidia cardgraphics
+      #./graphics.nix #for usage of nvidia cardgraphics
       ./hardware-configuration.nix
       ../../modules/nixos/gaming.nix
       ../../modules/nixos/shell.nix
