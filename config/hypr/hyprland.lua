@@ -22,6 +22,7 @@ hl.on("hyprland.start", function () -- init aplications
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("swaync")
     hl.exec_cmd("udiskie")
+    hl.exec_cmd("hyprpolkitagent")
 end)
 
 

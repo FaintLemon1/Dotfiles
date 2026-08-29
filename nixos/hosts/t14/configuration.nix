@@ -50,6 +50,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+  rpi-imager  
 	wireplumber   # provee wpctl
 	bluez     
   blueman #gestor_de_bluetoth
@@ -84,7 +85,8 @@
 
   # List services that you want to enable:
   #services.desktopManager.plasma6.enable = true;
-
+  services.udisks2.enable = true;
+  security.polkit.enable = true;
   services.tailscale.enable = true;
   services.power-profiles-daemon.enable = false;
   services.getty.autologinUser = "cesar"; #autologin
