@@ -10,7 +10,6 @@
     ../../modules/home/terminal.nix
     ../../modules/home/games.nix
     ../../modules/home/programs.nix
-
   ];
 
   home.username = "cesar";
@@ -18,7 +17,12 @@
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
-
+    obsidian
+    thunar
+    obs-studio
+    #freecad-wayland 
+    spotify
+    qbittorrent	
   ];
 
   programs.git.enable = true;
@@ -33,11 +37,4 @@
 
   home.file.".config/swaync".source =
     config.lib.file.mkOutOfStoreSymlink "/home/cesar/Dotfiles/config/swaync";
-
-  xdg.desktopEntries.prismlauncher-offload = {
-    name = "Prism Launcher (NVIDIA)";
-    exec = "nvidia-offload prismlauncher %u";
-    icon = "org.prismlauncher.PrismLauncher";
-    categories = [ "Game" ];
-  };
 }

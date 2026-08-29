@@ -29,5 +29,7 @@
     #portapapeles
     wl-clipboard
     playerctl
+
+
   ];
 }

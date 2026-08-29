@@ -3,7 +3,7 @@
 
 {
 	home.packages = with pkgs; [
-		
+	fastfetch
 	kitty #terminal
 	termdown #terminal cound_down
 	zathura #terminal_pdfreader
@@ -18,6 +18,7 @@
 	uxplay # reproducir iphone
 	ripgrep
 	fd
+  btop
 
 	];
 }

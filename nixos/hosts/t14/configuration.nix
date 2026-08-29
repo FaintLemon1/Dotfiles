@@ -1,16 +1,14 @@
 #configuracion de cosas relacionadas con el host
-# Thinkpad P15 Gen1
+# Thinkpad  T14 Gen2
 { config, pkgs, ... }:
 {
 	imports = [ # Include the results of the hardware scan.
-      ./graphics.nix #for usage of nvidia cardgraphics
       ./hardware-configuration.nix
       ../../modules/nixos/gaming.nix
       ../../modules/nixos/shell.nix
       ../../modules/nixos/printing.nix
       ../../modules/nixos/networking.nix
       ../../modules/nixos/bluetooth.nix
-
     ];
 
   # Bootloader
@@ -20,13 +18,10 @@
   	options thinkpad_acpi fan_control=1
   '';
 
-  # configuration.nix
+  ## configuration.nix  ######################
 	
-   # Set your time zone.
-  time.timeZone = "America/Mexico_City";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
+  time.timeZone = "America/Mexico_City";   # Set your time zone.
+  i18n.defaultLocale = "en_US.UTF-8";   # Select internationalisation properties.
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -58,7 +53,7 @@
 	wireplumber   # provee wpctl
 	bluez     
   blueman #gestor_de_bluetoth
-  ];
+ ];
 
 
 #some fonts for waybar icons and etc.
@@ -91,10 +86,7 @@
   #services.desktopManager.plasma6.enable = true;
 
   services.tailscale.enable = true;
-
-
   services.power-profiles-daemon.enable = false;
-
   services.getty.autologinUser = "cesar"; #autologin
   
 services.tlp = {
