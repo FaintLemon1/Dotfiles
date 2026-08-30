@@ -26,14 +26,23 @@
           id = "7EB5GVQ-W6NMICZ-IV2IDIZ-3ENXI2B-EXEBUNS-S2PYL66-XMJQUKG-FFFIYQX";
         };
       };
-
+      
       folders = {
-        "synccarpet" = {
-          id = "9e62e-ee3tp";
-          label = "Prueba Sync";
+        "screenshots" = {
+          id = "fvzn7-4qurc";
+          label = "screenshots";
+          path = "/home/cesar/syncthing/screenshots";
+          devices = [
+            "mamalona-server"
+          ];
+          type = "sendreceive";
 
-          path = "/home/cesar/syncthing";
 
+        };
+        "life" = {
+          id = "xchm6-uvenm";
+          label = "life";
+          path = "/home/cesar/syncthing/life";
           devices = [
             "mamalona-server"
           ];
