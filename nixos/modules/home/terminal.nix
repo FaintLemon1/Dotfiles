@@ -19,6 +19,7 @@
 	ripgrep
 	fd
   btop
+  sshfs
 
 	];
 }
