@@ -139,7 +139,7 @@ hl.bind(mainMod .. ' + ALT + l', window.resize(right), opts('right'))
 hl.device({
 	name = "logitech-g502-hero-gaming-mouse",
   accel_profile = "flat",
-	sensitivity = "0.5",
+	sensitivity = "-0.5",
 	})
  
 hl.device({ --nipple thinkpad
