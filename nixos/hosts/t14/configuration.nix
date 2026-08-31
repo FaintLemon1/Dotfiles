@@ -10,6 +10,7 @@
       ../../modules/nixos/networking.nix
       ../../modules/nixos/bluetooth.nix
       ../../modules/nixos/syncthing.nix
+      ../../modules/nixos/fingerprint.nix
     ];
 
   # Bootloader
@@ -51,7 +52,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  hyprpolkitagent
+  
+  geogebra
+  hyprpolkitagent #hyprland
   rpi-imager  
 	wireplumber   # provee wpctl
 	bluez     
