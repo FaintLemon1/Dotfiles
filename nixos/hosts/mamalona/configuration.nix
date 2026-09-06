@@ -10,6 +10,7 @@
       ../../modules/nixos/printing.nix
       #../../modules/nixos/networking.nix
       ../../modules/nixos/bluetooth.nix
+      ../../modules/nixos/syncthing.nix
 
     ];
 
