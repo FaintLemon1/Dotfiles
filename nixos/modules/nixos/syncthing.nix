@@ -17,8 +17,8 @@
     openDefaultPorts = true;
 
     # Lo definido aquí será la fuente de verdad.
-    overrideDevices = true;
-    overrideFolders = true;
+    #overrideDevices = true;
+    #overrideFolders = true;
 
     settings = {
       devices = {
@@ -27,29 +27,29 @@
         };
       };
       
-      folders = {
-        "screenshots" = {
-          id = "fvzn7-4qurc";
-          label = "screenshots";
-          path = "/home/cesar/syncthing/screenshots";
-          devices = [
-            "mamalona-server"
-          ];
-          type = "sendreceive";
+     # folders = {
+      #  "screenshots" = {
+      #    id = "fvzn7-4qurc";
+       #   label = "screenshots";
+        #  path = "/home/cesar/syncthing/screenshots";
+        #  devices = [
+        #    "mamalona-server"
+        #  ];
+        #  type = "sendreceive";
 
 
-        };
-        "life" = {
-          id = "xchm6-uvenm";
-          label = "life";
-          path = "/home/cesar/syncthing/life";
-          devices = [
-            "mamalona-server"
-          ];
+        #};
+        #"life" = {
+        #  id = "xchm6-uvenm";
+         # label = "life";
+         # path = "/home/cesar/syncthing/life";
+         # devices = [
+          #  "mamalona-server"
+          #];
 
-          type = "sendreceive";
-        };
-      };
+          #type = "sendreceive";
+       # };
+      #};
     };
   };
 }
