@@ -8,7 +8,7 @@
       ../../modules/nixos/gaming.nix
       ../../modules/nixos/shell.nix
       ../../modules/nixos/printing.nix
-      ../../modules/nixos/networking.nix
+      #../../modules/nixos/networking.nix
       ../../modules/nixos/bluetooth.nix
 
     ];
@@ -115,6 +115,29 @@ services.tlp = {
     START_CHARGE_THRESH_BAT0 = 75; # Starts charging when battery is below this %
     STOP_CHARGE_THRESH_BAT0 = 80;  # Stops charging when battery reaches this %
   };
+};
+
+ networking = {
+	hostName = "P15"; # Define your hostname
+	nameservers = [ "1.1.1.1" "1.0.0.1" ];
+	#enableIPv6 = false;
+
+	networkmanager = {
+		enable = true;
+	};
+	modemmanager = {
+		enable = true;
+	};
+  };
+networking.firewall.interfaces."enp0s31f6" = {
+  allowedUDPPorts = [
+    53 # DNS
+    67 # DHCP
+  ];
+
+  allowedTCPPorts = [
+    53 # DNS
+  ];
 };
 
 #services.syncthing = {
