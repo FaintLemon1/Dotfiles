@@ -36,8 +36,15 @@ hl.config({
 
 hl.config ({
 	general = {
-		gaps_in = 5,
-		gaps_out = 20,
+    border_size = 5,
+
+		gaps_in = 0,
+		gaps_out = 0,
+    
+    col = {
+            active_border = "rgba(89b4faff)",
+            inactive_border = "rgba(45475aaa)",
+        },
   	},
   	decoration = {
     		blur = {
@@ -54,7 +61,7 @@ hl.config({
 })
 
 
-
+hl.env("XCURSOR_THEME","Adwaita")
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 
