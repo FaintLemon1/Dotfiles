@@ -23,7 +23,7 @@ window#waybar {
 .modules-left,
 .modules-center,
 .modules-right {
-    background: #transparent; /* dark navy pill background */
+    background: transparent; /* dark navy pill background */
     margin: 5px 10px;
     padding: 0 5px;
     border-radius: 100px;
