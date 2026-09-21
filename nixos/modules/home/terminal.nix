@@ -20,6 +20,11 @@
 	fd
   btop
   sshfs
+  lazygit
+  gdu
+  p7zip
+  sl
+  tmux
 
 	];
 }

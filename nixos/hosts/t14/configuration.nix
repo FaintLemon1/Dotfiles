@@ -98,7 +98,7 @@
   };
   services.tailscale.enable = true;
   services.power-profiles-daemon.enable = false;
-  services.getty.autologinUser = "cesar"; #autologin
+  #services.getty.autologinUser = "cesar"; #autologin
   
 services.tlp = {
   enable = true;
