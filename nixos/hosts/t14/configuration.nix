@@ -11,6 +11,7 @@
       ../../modules/nixos/bluetooth.nix
       ../../modules/nixos/syncthing.nix
       ../../modules/nixos/fingerprint.nix
+      ../../modules/desktops/sddm.nix
     ];
 
   # Bootloader
@@ -118,30 +119,6 @@ services.tlp = {
     STOP_CHARGE_THRESH_BAT0 = 80;  # Stops charging when battery reaches this %
   };
 };
-
-#services.syncthing = {
-#    enable = true;
-#    group = "users";
-#    user = "cesar";
-#    dataDir = "/home/cesar/life";
-#    configDir = "/home/cesar/.config/syncthing";
-#    overrideDevices = true;     # overrides any devices added or deleted through the WebUI
-#    overrideFolders = true;     # overrides any folders added or deleted through the WebUI
-#
-#    settings = {
-#      devices = {
-#        "iphone" = { id = "PUUWPWF-WNLP6KA-TUEHIB3-RYPRO4L-5FTSUFM-ESLMU5V-COS4IZC-MDH7TQ3"; };
-#      };
-#      folders = {
-#        "life" = {         # Name of folder in Syncthing, also the folder ID
-#          path = "/home/cesar/life";    # Which folder to add to Syncthing
-#          devices = [ "iphone" ];      # Which devices to share the folder with
-#        };
-#
-#        };
-#    };
-#  };
-
  
   system.stateVersion = "25.11"; # Did you read the comment?
   environment.variables = {
