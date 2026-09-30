@@ -4,6 +4,8 @@
 {
 	home.packages = with pkgs; [
 	fastfetch
+  foot #terminal
+  fuzzel # 
 	kitty #terminal
 	termdown #terminal cound_down
 	zathura #terminal_pdfreader
@@ -26,5 +28,6 @@
   sl
   tmux
 
+ bpftrace
 	];
 }

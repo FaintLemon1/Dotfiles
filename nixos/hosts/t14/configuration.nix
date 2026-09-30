@@ -97,26 +97,44 @@
     enablePkexecWrapper = true;
   };
   services.tailscale.enable = true;
+
+  # Bueno para CPUs Intel
+  services.thermald.enable = true;
+
   services.power-profiles-daemon.enable = false;
-  #services.getty.autologinUser = "cesar"; #autologin
   
+
 services.tlp = {
   enable = true;
+
   settings = {
+    #Cpu
     CPU_SCALING_GOVERNOR_ON_AC = "performance";
     CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
 
+    #firmware
     CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
     CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+    
+    #Turbo
+    CPU_BOOST_ON_AC = 1;
+    CPU_BOOST_ON_BAT = 1;
 
+    CPU_HWP_DYN_BOOST_ON_AC = 1;
+    CPU_HWP_DYN_BOOST_ON_BAT = 1;
+
+    #limitar frecuencia de cpu 
     CPU_MIN_PERF_ON_AC = 0;
     CPU_MAX_PERF_ON_AC = 100;
     CPU_MIN_PERF_ON_BAT = 0;
-    CPU_MAX_PERF_ON_BAT = 20;
+    CPU_MAX_PERF_ON_BAT = 80;
 
     # Battery thresholds (adjust BAT0/BAT1 based on your laptop model)
     START_CHARGE_THRESH_BAT0 = 75; # Starts charging when battery is below this %
     STOP_CHARGE_THRESH_BAT0 = 80;  # Stops charging when battery reaches this %
+
+    WIFI_PWR_ON_AC = "off";
+    WIFI_PWR_ON_BAT = "on";
   };
 };
  
@@ -128,6 +146,17 @@ services.tlp = {
 
 
  
+hardware.graphics = {
+  enable = true;
 
+  extraPackages = with pkgs; [
+    intel-media-driver
+    vpl-gpu-rt
+  ];
+};
+
+environment.sessionVariables = {
+  LIBVA_DRIVER_NAME = "iHD";
+};
   
 }

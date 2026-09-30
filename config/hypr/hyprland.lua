@@ -4,7 +4,7 @@ hl.monitor({ -- monitor config
   output = "eDP-1",
   mode = "preferred",
   position = "0x0",
-  scale = 1,
+  scale = 1.25,
   transform = 0,
 })
 
@@ -17,7 +17,7 @@ hl.monitor({ --hdmi monitor config
 
 
 hl.on("hyprland.start", function () -- init aplications
-    hl.exec_cmd("terminal")
+    hl.exec_cmd("foot")
     hl.exec_cmd("waybar")
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("swaync")
@@ -48,8 +48,11 @@ hl.config ({
   	},
   	decoration = {
     		blur = {
-      		enabled = true,
+      		enabled = false,
     		},
+        shadow = {
+          enabled = false,
+        },
   	},
 })
 
@@ -63,6 +66,7 @@ hl.config({
 
 hl.env("XCURSOR_THEME","Adwaita")
 hl.env("XCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_THEME", "Adwaita")
 hl.env("HYPRCURSOR_SIZE", "24")
 
 local mainMod = "SUPER"
@@ -77,7 +81,7 @@ hl.bind(mainMod .. " + L ", hl.dsp.exec_cmd("hyprlock")) -- lock
  -- hl.bind(mainMod .. " + A ", hl.dsp.exec_cmd("gnome-calculator"))
 hl.bind(mainMod .. " + Z ", hl.dsp.exec_cmd("zen"))
 hl.bind(mainMod .. " + D ", hl.dsp.exec_cmd("discord"))
-hl.bind(mainMod .. " + Q ", hl.dsp.exec_cmd("kitty"))
+hl.bind(mainMod .. " + Q ", hl.dsp.exec_cmd("foot"))
 hl.bind(mainMod .. " + E ", hl.dsp.exec_cmd("thunar"))
 hl.bind(mainMod .. " + R ",hl.dsp.exec_cmd(" wofi --show drun"))
 
