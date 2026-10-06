@@ -27,7 +27,17 @@
   p7zip
   sl
   tmux
+  chafa ##for render images
 
  bpftrace
+
+  cbonsai
+  sl
+  tty-clock
+  cava
+  fastfetch
+  chafa
+  figlet
+  lolcat
 	];
 }
