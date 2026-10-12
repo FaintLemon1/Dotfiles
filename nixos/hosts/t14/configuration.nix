@@ -36,7 +36,7 @@
   users.users.cesar = {
     isNormalUser = true;
     description = "cesar";
-    extraGroups = [ "plugdev" "networkmanager" "wheel" "input" "uinput"];
+    extraGroups = [ "plugdev" "networkmanager" "wheel" "input" "uinput" "docker"];
     packages = with pkgs; [];
   };
 
@@ -60,6 +60,9 @@
 	wireplumber   # provee wpctl
 	bluez     
   blueman #gestor_de_bluetoth
+  
+  docker
+  docker-compose
  ];
 
 
@@ -158,5 +161,7 @@ hardware.graphics = {
 environment.sessionVariables = {
   LIBVA_DRIVER_NAME = "iHD";
 };
-  
+ # Habilitar Docker Engine como servicio
+  virtualisation.docker.enable = true;
+
 }

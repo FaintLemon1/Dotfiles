@@ -77,6 +77,7 @@ hl.bind(mainMod .. " + SHIFT + W ",hl.dsp.exec_cmd("pkill waybar && waybar")) --
 hl.bind(mainMod .. " + W ", hl.dsp.exec_cmd("pkill -SIGUSR1 waybar")) -- minimize waybar
 hl.bind(mainMod .. " + N ", hl.dsp.exec_cmd("swaync-client -t -sw")) -- swaync
 hl.bind(mainMod .. " + L ", hl.dsp.exec_cmd("hyprlock")) -- lock 
+hl.bind(mainMod .. " + B ", hl.dsp.exec_cmd("foot yazi ~/syncthing/books/demat-libros")) -- lock 
 
  -- hl.bind(mainMod .. " + A ", hl.dsp.exec_cmd("gnome-calculator"))
 hl.bind(mainMod .. " + Z ", hl.dsp.exec_cmd("zen"))

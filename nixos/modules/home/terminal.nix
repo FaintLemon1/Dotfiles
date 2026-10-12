@@ -2,6 +2,7 @@
 { pkgs, ... }:
 
 {
+
 	home.packages = with pkgs; [
 	fastfetch
   foot #terminal
@@ -45,6 +46,7 @@
   figlet
   lolcat
   asciiquarium
+  tofi
 	];
 
 programs.foot = {
@@ -66,19 +68,19 @@ programs.foot = {
 
       # Fuente principal.
       # 11.5 es un buen tamaño si quieres aprovechar espacio.
-      font = "JetBrainsMono Nerd Font:size=11.5";
+      font = "JetBrainsMono Nerd Font:size=10";
 
       # Foot normalmente puede encontrar estas variantes solo,
       # pero definirlas explícitamente evita elecciones raras
       # de fontconfig.
       font-bold =
-        "JetBrainsMono Nerd Font:style=Bold:size=11.5";
+        "JetBrainsMono Nerd Font:style=Bold:size=10";
 
       font-italic =
-        "JetBrainsMono Nerd Font:style=Italic:size=11.5";
+        "JetBrainsMono Nerd Font:style=Italic:size=110";
 
       font-bold-italic =
-        "JetBrainsMono Nerd Font:style=Bold Italic:size=11.5";
+        "JetBrainsMono Nerd Font:style=Bold Italic:size=10";
 
       # Usa correctamente el DPI reportado por Wayland.
       dpi-aware = "yes";
@@ -154,10 +156,10 @@ programs.foot = {
       # 1.00 = completamente opaco
       # 0.95 = casi opaco
       # 0.90 = bastante agradable
-      # 0.80 = bastante transparente
+      #0.80 = bastante transparente
       #
       # 0.92 es mi recomendación para uso diario.
-      alpha = 0.92;
+      #alpha = 0.92;
 
       # Fondo
       background = "11111b";
