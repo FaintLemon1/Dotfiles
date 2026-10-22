@@ -77,7 +77,7 @@ programs.foot = {
         "JetBrainsMono Nerd Font:style=Bold:size=10";
 
       font-italic =
-        "JetBrainsMono Nerd Font:style=Italic:size=110";
+        "JetBrainsMono Nerd Font:style=Italic:size=10";
 
       font-bold-italic =
         "JetBrainsMono Nerd Font:style=Bold Italic:size=10";
@@ -159,7 +159,7 @@ programs.foot = {
       #0.80 = bastante transparente
       #
       # 0.92 es mi recomendación para uso diario.
-      #alpha = 0.92;
+      alpha = 0.80;
 
       # Fondo
       background = "11111b";
