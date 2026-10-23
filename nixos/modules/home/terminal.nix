@@ -47,6 +47,8 @@
   lolcat
   asciiquarium
   tofi
+  runapp
+  tigervnc
 	];
 
 programs.foot = {
