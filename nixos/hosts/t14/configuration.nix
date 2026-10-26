@@ -11,7 +11,7 @@
       ../../modules/nixos/bluetooth.nix
       ../../modules/nixos/syncthing.nix
       ../../modules/nixos/fingerprint.nix
-      ../../modules/desktops/sddm.nix
+      #../../modules/desktops/sddm.nix
     ];
 
   # Bootloader
