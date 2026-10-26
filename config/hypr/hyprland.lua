@@ -46,8 +46,23 @@ hl.config ({
         },
   	},
   	decoration = {
+
+        active_opacity = 0.92,
+        inactive_opacity = 0.85,
+        fullscreen_opacity = 1.0,
+
     		blur = {
-      		enabled = false,
+      		enabled = true,
+          size = 6,              -- radio del blur
+          passes = 3,            -- más pasadas = más suave, más costo de GPU
+          new_optimizations = true,
+          xray = true,          -- true: las ventanas flotantes solo difuminan el wallpaper
+          -- ignore_opacity = true, -- difumina aunque la ventana sea casi opaca
+          noise = 0.01,
+          contrast = 0.9,
+          brightness = 0.8,
+          vibrancy = 0.17,
+          popups = true,
     		},
         shadow = {
           enabled = false,

@@ -11,7 +11,7 @@
       #../../modules/nixos/networking.nix
       ../../modules/nixos/bluetooth.nix
       ../../modules/nixos/syncthing.nix
-
+      ../../modules/nixos/sddm.nix
     ];
 
   # Bootloader
@@ -58,7 +58,16 @@
   environment.systemPackages = with pkgs; [
 	wireplumber   # provee wpctl
 	bluez     
+  
+  geogebra
+  hyprpolkitagent #hyprland
+  rpi-imager  
+	wireplumber   # provee wpctl
+	bluez     
   blueman #gestor_de_bluetoth
+  
+  docker
+  docker-compose
   ];
 
 
