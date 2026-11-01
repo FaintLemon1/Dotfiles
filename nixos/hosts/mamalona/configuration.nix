@@ -11,7 +11,7 @@
       #../../modules/nixos/networking.nix
       ../../modules/nixos/bluetooth.nix
       ../../modules/nixos/syncthing.nix
-      ../../modules/nixos/sddm.nix
+      ../../modules/desktops/sddm.nix
     ];
 
   # Bootloader
@@ -39,7 +39,7 @@
   users.users.cesar = {
     isNormalUser = true;
     description = "cesar";
-    extraGroups = [ "plugdev" "networkmanager" "wheel" "input" "uinput"];
+    extraGroups = [ "plugdev" "networkmanager" "wheel" "input" "uinput" "docker"];
     packages = with pkgs; [];
   };
 
@@ -178,7 +178,10 @@ networking.firewall.interfaces."enp0s31f6" = {
   environment.variables = {
   EDITOR = "nvim";
   VISUAL = "nvim";
+
 };
+ # Habilitar Docker Engine como servicio
+  virtualisation.docker.enable = true;
 
 
  

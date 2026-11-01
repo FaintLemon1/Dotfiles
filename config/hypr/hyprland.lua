@@ -201,7 +201,14 @@ hl.window_rule({
   name = "float-discord", 
   match = {
     class = "discord",
+    float = true,
   }
+})
+
+hl.window_rule({
+  name = "zathura-opaco",
+  match = { class = "^(org\\.pwmt\\.zathura)$" },
+  opacity = "1.0 override 1.0 override 1.0 override",
 })
 
 hl.window_rule({

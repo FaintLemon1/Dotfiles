@@ -29,6 +29,7 @@
   sl
   tmux
   chafa ##for render images
+  file # for se type of file
  
  ###things for yocto
  bpftrace 
@@ -154,7 +155,7 @@ programs.foot = {
     # COLORES
     # -----------------------------------------------------------
 
-    colors = {
+    colors-light = {
       # 1.00 = completamente opaco
       # 0.95 = casi opaco
       # 0.90 = bastante agradable
@@ -295,10 +296,16 @@ programs.tmux = {
     sensible
 
 
+
+    {
     # Guarda sesiones/windows/panes para poder reconstruirlos.
-    resurrect
-
-
+    plugin = resurrect;
+    
+      extraConfig = ''
+        # Guarda también el texto visible de cada pane
+        set -g @resurrect-capture-pane-contents 'on'
+      '';
+    }
     {
       plugin = continuum;
 
@@ -518,6 +525,7 @@ programs.tmux = {
 
     # Evita campanas molestas.
     set -g bell-action none
-  '';
+
+    '';
 };
 }
