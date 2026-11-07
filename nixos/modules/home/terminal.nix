@@ -50,6 +50,8 @@
   tofi
   runapp
   tigervnc
+
+  minicom
 	];
 
 programs.foot = {
@@ -155,7 +157,7 @@ programs.foot = {
     # COLORES
     # -----------------------------------------------------------
 
-    colors-light = {
+    colors-dark = {
       # 1.00 = completamente opaco
       # 0.95 = casi opaco
       # 0.90 = bastante agradable

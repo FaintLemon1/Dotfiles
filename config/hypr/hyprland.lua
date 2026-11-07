@@ -212,6 +212,20 @@ hl.window_rule({
 })
 
 hl.window_rule({
+  name = "foot-opaco",
+  match = { class = "^(foot)$" },
+  opacity = "1.0 override 1.0 override 1.0 override",
+})
+
+hl.window_rule({
+  name = "zen-opaco",
+  match = { class = "^(zen-beta)$" },
+  opacity = "1.0 override 1.0 override 1.0 override",
+})
+
+
+
+hl.window_rule({
   name = "float-dolphin",
   match = {
     class = "org.kde.dolphin",

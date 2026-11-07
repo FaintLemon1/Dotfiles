@@ -39,7 +39,7 @@
   users.users.cesar = {
     isNormalUser = true;
     description = "cesar";
-    extraGroups = [ "plugdev" "networkmanager" "wheel" "input" "uinput" "docker"];
+    extraGroups = [ "plugdev" "networkmanager" "wheel" "input" "uinput" "docker" "dialout"];
     packages = with pkgs; [];
   };
 
