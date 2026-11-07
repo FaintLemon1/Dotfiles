@@ -18,7 +18,7 @@
 
   outputs = { nixpkgs, zen-browser, home-manager, ... }@inputs: {
     nixosConfigurations = { 
-      mamlona = nixpkgs.lib.nixosSystem {
+      mamalona = nixpkgs.lib.nixosSystem {
         modules = [
           ./hosts/mamalona/configuration.nix
 

@@ -3,6 +3,8 @@
 {
   programs.neovim = {
     enable = true;
+    withRuby = false;
+    withPython3 = false;
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
@@ -66,7 +68,7 @@
       nabla-nvim
       vimtex
       csvview-nvim
-      render-markdown
+      render-markdown-nvim
       nvim-colorizer-lua
 
       # Parsers compilados por Nix. No se usa :TSInstall.
