@@ -4,7 +4,7 @@ hl.monitor({ -- monitor config
   output = "eDP-1",
   mode = "preferred",
   position = "0x0",
-  scale = 1.25,
+  scale = 1,
   transform = 0,
 })
 
@@ -94,7 +94,7 @@ hl.bind(mainMod .. " + L ", hl.dsp.exec_cmd("hyprlock")) -- lock
 hl.bind(mainMod .. " + B ", hl.dsp.exec_cmd("foot yazi ~/syncthing/books/demat-libros")) -- lock 
 
  -- hl.bind(mainMod .. " + A ", hl.dsp.exec_cmd("gnome-calculator"))
-hl.bind(mainMod .. " + Z ", hl.dsp.exec_cmd("zen"))
+hl.bind(mainMod .. " + Z ", hl.dsp.exec_cmd("zen-beta"))
 hl.bind(mainMod .. " + D ", hl.dsp.exec_cmd("discord"))
 hl.bind(mainMod .. " + Q ", hl.dsp.exec_cmd("foot"))
 hl.bind(mainMod .. " + E ", hl.dsp.exec_cmd("thunar"))
