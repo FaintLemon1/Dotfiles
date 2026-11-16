@@ -97,6 +97,7 @@ hl.bind(mainMod .. " + B ", hl.dsp.exec_cmd("foot yazi ~/syncthing/books/demat-l
 hl.bind(mainMod .. " + Z ", hl.dsp.exec_cmd("zen-beta"))
 hl.bind(mainMod .. " + D ", hl.dsp.exec_cmd("discord"))
 hl.bind(mainMod .. " + Q ", hl.dsp.exec_cmd("foot"))
+hl.bind(mainMod .. " + K ", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + E ", hl.dsp.exec_cmd("thunar"))
 hl.bind(mainMod .. " + R ",hl.dsp.exec_cmd(" wofi --show drun"))
 
@@ -185,17 +186,17 @@ hl.device({ --trackpad thinkpad
 })
 
 -- windowrules 
-hl.window_rule({
-  name = "float-steam",
-  match = {
-    class = "steam"
-
-  },
-  float = true,
-  center = true,
-  size = {"monitor_w * 0.5", "monitor_h * 0.5"},
-  
-})
+--hl.window_rule({
+--  name = "float-steam",
+--  match = {
+--    class = "steam"
+--
+--  },
+--  float = true,
+--  center = true,
+--  size = {"monitor_w * 0.5", "monitor_h * 0.5"},
+--  
+--})
 
 hl.window_rule({
   name = "float-discord", 
