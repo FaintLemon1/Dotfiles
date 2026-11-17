@@ -17,6 +17,7 @@
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
+  #boot.loader.systemd-boot.edk2-uefi-shell.enable = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;  # Use latest kernel.
   boot.extraModprobeConfig = ''
   	options thinkpad_acpi fan_control=1
