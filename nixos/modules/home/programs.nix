@@ -7,6 +7,7 @@
     #freecad-wayland 
     spotify
     #qbittorrent
+    thunderbird
   ];
 
 
